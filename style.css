@@ -1,0 +1,35 @@
+body, html{
+    margin: 75px;;
+    padding: 0;
+    
+}
+body{
+    form{
+
+    margin: 26pt;
+    background-color: rgb(39, 44, 56);
+    margin: 0;
+    border-radius: 80px;
+    padding: 60px;
+    border: 60px;
+    text-align: center;
+    }
+}
+.cor{
+ 
+    color: #FFFDD0; */
+    /* font-size: 26pt; */
+   
+    /*width: 300px;*/
+    
+    padding: 60px;
+    border: 20;
+    border-color: #4d918b
+    border-color rgb(150, 145, 145);
+    border-style: groove;
+    border-radius: 50px;
+}
+
+cor{
+    color: rgb(38, 143, 108);
+}
