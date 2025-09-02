@@ -1,64 +1,55 @@
-<!doctype html>
-<html lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <meta charset = " viewport" content="width=device-width" />
-  <title>riccardo</title>
-    <link rel = "stylesheet" href="style.css"/> 
-</head>
-<body>
-    <main>
-    <header>
-  <h1>Para poder votar, faça seu cadastro antes</h1>
-  </header>
+  <!doctype html>
+  <html lang="pt-br">
+    
+    <head>
+      <meta charset="utf-8">
+      <meta charset=" viewport" content="width=device-width" />
+      <title>Cadastro</title>
+      <link rel="stylesheet" href="style.css" />
+    </head>
+    
+    <body>
+      <main>
+        <header>
+        <h1 id = "titulo_pagina"> Para poder votar, faça seu cadastro antes:</h1>
+      </header>
 
-    <form>
-      <legend li class ="cor">CADASTRO</legend>
-      <p>
-        <label  for="NOME" id="NOME">NOME:
+      <form class="formCadastro">
+        <legend li class="cor">CADASTRO</legend>
+        
+        <label for="NOME" id="NOME">NOME:
           <input type="text" name="EMAIL" autocomplete="off">
         </label>
-      </p>
-      <p>
+       
         <label for="EMAIL" id="E-MAIL">E-MAIL:
           <input type="text" name="EMAIL" autocomplete="on">
         </label>
-      </p>
-      <br>
-      <label li class ="cor">SELECIONE UMA DATA:</label>
-      <input type="month" name="data" size="50">
-      <br><br>
-      <label  for="telefone">celular:
-        <input name="TELEFONE" id="TELEFONE" required pattern="\D{7}-?\D{4}" placeholder="(00)90000-0000" />
-      </label>
-      <input type="submit" value="ENVIAR" />
-      <br><br>
-      <input type="submit" value="CADASTRAR MAMBROS" formaction="CADASTR0_MEMBROS.PHP" />
-      <input type="reset" value="LIMPAR">
-   
-  
+        
+        <label li class="cor">SELECIONE UMA DATA:
+          <input type="month" name="data"> 
+        </label>
+        
+        <label for="telefone">CELULAR:
+          <input name="TELEFONE" id="TELEFONE" required pattern="\D{7}-?\D{4}" placeholder="(00)90000-0000" />
+        </label>
 
-  <br><br>
-  <a href="outra-pagina.html" target="_blank">MELHORES FUNCIONARIOS</a>
-    <id = "cor1">
-    <h2> <li class ="cor">ESCOLHA QUEM VOCÊ ACHA QUE DEVE GANHAR O PREMIO</h2>
-  
-    <ol>
-      <h2><li class ="cor">larissa <input type="checkbox" name="opcoes" value="larissa" /></li>
-      <li class ="cor">douglas <input type="checkbox" name="opcoes" value="douglas" /></li>
-      <li class ="cor">juliana <input type="checkbox" name="opcoes" value="juliana" /></li>
-      <li class ="cor">matheus <input type="checkbox" name="opcoes" value="matheus" /></li>
-      <li class ="cor">paulo <input type="checkbox" name="opcoes" value="paulo" /></li>
-      <li class ="cor">jorge <input type="checkbox" name="opcoes" value="jorge" /></li>
-      <li class ="cor">nathalia <input type="checkbox" name="opcoes" value="nathalia" /></li>
-    </ol>
-    <h3> Veja os premiados</h3>
-  </form>
+        <input class = "basic-button" type="submit" value="ENVIAR" />
+        
+        <input class ="basic-button" type="submit" value="CADASTRAR MEMBROS" formaction="CADASTR0_MEMBROS.PHP" />
+        <input class ="basic-button" type="reset" value="LIMPAR">
+        <br>
+        <a href="index3.html" target="_blank">MELHORES FUNCIONARIOS</a>
+        
+        
+        
+      
+      </form>
     </main>
-  </fieldset>  
-  <footer>
-    <p>Todos os direitos reservados: &copy; 2025 Nome do Autor</p>
+    </fieldset>
+    <footer>
+      <p>Todos os direitos reservados: &copy; 2025 Nome do Autor</p>
     </footer>
 
-</body>
-</html>
+  </body>
+
+  </html>
