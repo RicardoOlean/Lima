@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+
+/* LADO ESQUERDO */
+
+.left {
+    background-color: #ff0000;
+    color: #fff;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content-left {
+    max-width: 300px;
+}
+
+.content-left h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.carro {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.content-left h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content-left p {
+    margin-bottom: 20px;
+}
+
+.btn-entrar {
+    background: none;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-entrar:hover {
+    background-color: #fff;
+    color: #ff0000;
+}
+
+.esqueci {
+    display: block;
+    margin-top: 15px;
+    color: #fff;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+
+/* LADO DIREITO */
+
+.right {
+    background-color: #000;
+    color: #fff;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-right {
+    width: 80%;
+    max-width: 350px;
+}
+
+.content-right h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.content-right p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #e8e3e3;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.btn-cadastrar {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-cadastrar:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
