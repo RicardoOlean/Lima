@@ -15,6 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+
 }
 
 .logo {
@@ -40,11 +41,13 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    /* text-align: center; */
 }
 
 .menu a {
     color: white;
     text-decoration: none;
+    
 }
 
 .menu a:hover {

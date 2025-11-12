@@ -1,27 +1,113 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagamento - ROL</title>
+  <link rel="stylesheet" href="pagamento.css">
+</head>
+<body>
+  <header>
+    <h1>ROL E-commerce</h1>
+    <nav>
+      <a href="index.html">Início</a> |
+      <a href="produtos.html">Produtos</a> |
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <div class="container-pagamento">
+    <h2>Finalizar Pagamento</h2>
+    <form>
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+      <label for="endereco">Endereço de entrega:</label>
+      <input type="text" id="endereco" placeholder="Digite seu endereço completo" required>
+
+      <label for="pagamento">Forma de pagamento:</label>
+      <select id="pagamento" required>
+        <option value="">Selecione</option>
+        <option value="credito">Cartão de Crédito</option>
+        <option value="debito">Cartão de Débito</option>
+        <option value="pix">PIX</option>
+      </select>
+
+      <div id="info-cartao" class="oculto">
+        <label for="numero-cartao">Número do cartão:</label>
+        <input type="number" id="numero-cartao" placeholder="•••• •••• •••• ••••">
+
+        <label for="validade">Validade:</label>
+        <input type="text" id="validade" placeholder="MM/AA">
+
+        <label for="cvv">CVV:</label>
+        <input type="number" id="cvv" placeholder="123">
+      </div>
+
+      <button type="submit">Confirmar Pagamento</button>
+    </form>
+
+    <div class="resumo-carrinho">
+      <h3>Resumo do Pedido</h3>
+      <p>Produto: Carrinho de Fórmula 1</p>
+      <p>Quantidade: 2</p>
+      <p>Total: R$ 199,90</p>
+    </div>
+  </div>
+
+  <script>
+    const selectPagamento = document.getElementById('pagamento');
+    const infoCartao = document.getElementById('info-cartao');
+
+    selectPagamento.addEventListener('change', () => {
+      if (selectPagamento.value === 'credito' || selectPagamento.value === 'debito') {
+        infoCartao.classList.remove('oculto');
+      } else {
+        infoCartao.classList.add('oculto');
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+{% comment %} <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Melhores Funcionários</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <a href="index2.html"><button class="btn_voltar_index_2"><img src="images/arrow-left-solid-full.svg" /> Voltar</button></a>
+  <title>Pagamento</title>
+  <section class="pagamento" id="pagamento">
+      <form>
+        <label>Escolha o método:</label>
+        <select>
+          <option>Crédito</option>
+          <option>Débito</option>
+          <option>PIX</option>
+        </select>
+        <button type="submit">Pagar agora</button>
+      </form>
+    </section>
+  </main>
 
-  <header id="titulo_pagina">ESCOLHA QUEM VOCÊ ACHA QUE DEVE GANHAR O PRÊMIO?</header>
-    <hr>
-  <ol class="lista-escolha-premio">
-    <li>Larissa <input type="checkbox" name="opcoes" value="larissa" /></li>
-    <li>Douglas <input type="checkbox" name="opcoes" value="douglas" /></li>
-    <li>Juliana <input type="checkbox" name="opcoes" value="juliana" /></li>
-    <li>Matheus <input type="checkbox" name="opcoes" value="matheus" /></li>
-    <li>Paulo <input type="checkbox" name="opcoes" value="paulo" /></li>
-    <li>Jorge <input type="checkbox" name="opcoes" value="jorge" /></li>
-    <li>Nathalia <input type="checkbox" name="opcoes" value="nathalia" /></li>
-  </ol>
+  <footer>
+    © 2025 Ecommerce do ROL — Ricardo de Oliveira Leandro
+  </footer>
 
-  <button class="btn_ver_premiados">Veja os premiados</button>
+  <script>
+    const buttons = document.querySelectorAll('.produto button');
+    const cartCount = document.getElementById('cartCount');
+    let count = 0;
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        count++;
+        cartCount.textContent = count;
+      });
+    });
 
 </body>
-</html>
+</html> {% endcomment %}

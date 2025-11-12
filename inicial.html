@@ -21,7 +21,8 @@
         <li><a href="#produtos">Produtos</a></li>
         <li><a href="#carrinho">Carrinho</a></li>
       </ul>
-      <div class="carrinho">🛒 <span id="cartCount">0</span></div>
+      <div   onclick="window.location.href='pagamento.html'"> 🛒 <span id="cartCount">0</span>
+      </div>
     </nav>
   </header>
 
@@ -59,40 +60,12 @@
           <div class="img">Imagem</div>
           <h3>F1 Legends - Edição Limitada</h3>
           <p>R$ 199,90</p>
-          <button>Adicionar ao carrinho</button>
+          <button >Adicionar ao carrinho</button>
         </div>
       </div>
     </section>
 
-    <section class="pagamento" id="pagamento">
-      <h2>Pagamento</h2>
-      <form>
-        <label>Escolha o método:</label>
-        <select>
-          <option>Crédito</option>
-          <option>Débito</option>
-          <option>PIX</option>
-        </select>
-        <button type="submit">Pagar agora</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 Ecommerce do ROL — Ricardo de Oliveira Leandro
-  </footer>
-
-  <script>
-    const buttons = document.querySelectorAll('.produto button');
-    const cartCount = document.getElementById('cartCount');
-    let count = 0;
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        count++;
-        cartCount.textContent = count;
-      });
-    });
+    
   </script>
 </body>
 </html>
