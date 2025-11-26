@@ -8,10 +8,9 @@
 </head>
 <body>
   <header>
-    <h1>ROL E-commerce</h1>
+    <h1 class="logo-icon">ROL E-commerce</h1>
     <nav>
-      <a href="index.html">Início</a> |
-      <a href="produtos.html">Produtos</a> |
+      <a href="inicial.html">Produtos</a> |
       <a href="login.html">Login</a>
     </nav>
   </header>
@@ -42,7 +41,7 @@
 
         <label for="validade">Validade:</label>
         <input type="text" id="validade" placeholder="MM/AA">
-
+        </br>
         <label for="cvv">CVV:</label>
         <input type="number" id="cvv" placeholder="123">
       </div>
@@ -58,56 +57,7 @@
     </div>
   </div>
 
-  <script>
-    const selectPagamento = document.getElementById('pagamento');
-    const infoCartao = document.getElementById('info-cartao');
-
-    selectPagamento.addEventListener('change', () => {
-      if (selectPagamento.value === 'credito' || selectPagamento.value === 'debito') {
-        infoCartao.classList.remove('oculto');
-      } else {
-        infoCartao.classList.add('oculto');
-      }
-    });
-  </script>
+ 
 </body>
 </html>
 
-
-{% comment %} <!DOCTYPE HTML>
-<html lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagamento</title>
-  <section class="pagamento" id="pagamento">
-      <form>
-        <label>Escolha o método:</label>
-        <select>
-          <option>Crédito</option>
-          <option>Débito</option>
-          <option>PIX</option>
-        </select>
-        <button type="submit">Pagar agora</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 Ecommerce do ROL — Ricardo de Oliveira Leandro
-  </footer>
-
-  <script>
-    const buttons = document.querySelectorAll('.produto button');
-    const cartCount = document.getElementById('cartCount');
-    let count = 0;
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        count++;
-        cartCount.textContent = count;
-      });
-    });
-
-</body>
-</html> {% endcomment %}
