@@ -9,6 +9,8 @@
 <body>
   <header>
     <nav class="navbar">
+      
+      <!-- LOGO -->
       <div class="logo">
         <div class="logo-icon">R</div>
         <div class="logo-text">
@@ -16,22 +18,31 @@
           <small>E-commerce F1</small>
         </div>
       </div>
-      <ul class=menu>
+
+      <!-- MENU -->
+      <ul class="menu">
         <li><a href="#home">Início</a></li>
         <li><a href="#produtos">Produtos</a></li>
         <li><a href="#carrinho">Carrinho</a></li>
       </ul>
-      <div   onclick="window.location.href='pagamento.html'">carrinho 🛒 <span id="cartCount">0</span>
+
+      <!-- CARRINHO -->
+      <div class="carrinho" onclick="window.location.href='pagamento.html'">
+        🛒 <span id="cartCount">0</span>
       </div>
+
     </nav>
   </header>
 
+  <!-- INTRO / HERO -->
   <section class="header-intro" id="home">
     <h1>Ecommerce do ROL</h1>
     <p>Venda de carrinhos de Fórmula — por unidade ou atacado. Cores: Preto, Vermelho e Branco.</p>
   </section>
 
   <main>
+
+    <!-- RARIDADES -->
     <section class="raridades">
       <h2>Raridades</h2>
       <div class="raridade-cards">
@@ -41,31 +52,45 @@
       </div>
     </section>
 
+    <!-- PRODUTOS -->
     <section class="produtos" id="produtos">
       <h2>Produtos em Destaque</h2>
+
       <div class="grid-produtos">
+        
         <div class="produto">
-          <div class="img">Imagem</div>
+          <div><img src="images/carrinho1.png" alt="Fórmula 1"></div>
           <h3>F1 Sprint - Vermelho</h3>
           <p>R$ 29,90</p>
-          <button>Adicionar ao carrinho</button>
+          <button onclick="addToCart()">Adicionar ao carrinho</button>
         </div>
+
         <div class="produto">
-          <div class="img">Imagem</div>
+          <div><img src="images/carrinho1.png" alt="Fórmula 1"></div>
           <h3>F1 Collector - Preto Metalizado</h3>
           <p>R$ 79,90</p>
-          <button>Adicionar ao carrinho</button>
+          <button onclick="addToCart()">Adicionar ao carrinho</button>
         </div>
+
         <div class="produto">
-          <div class="img">Imagem</div>
+          <div><img src="images/carrinho2.png" alt="Fórmula 1"></div>
           <h3>F1 Legends - Edição Limitada</h3>
           <p>R$ 199,90</p>
-          <button >Adicionar ao carrinho</button>
+          <button onclick="addToCart()">Adicionar ao carrinho</button>
         </div>
+
       </div>
     </section>
 
-    
+  </main>
+
+  <script>
+    // animação do carrinho
+    function addToCart() {
+      let cartCount = document.getElementById("cartCount");
+      cartCount.innerText = parseInt(cartCount.innerText) + 1;
+    }
   </script>
+
 </body>
 </html>

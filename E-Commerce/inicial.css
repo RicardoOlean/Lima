@@ -1,3 +1,4 @@
+/* BASE */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,9 +6,12 @@ body {
     color: #000;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
 
 /* NAVBAR */
-
 .navbar {
     background: #000;
     color: #fff;
@@ -15,7 +19,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -38,40 +43,44 @@ body {
 .menu {
     display: flex;
     list-style: none;
-    justify-content: center;
-    align-items: center;
     gap: 1.5rem;
-    /* text-align: center; */
 }
 
 .menu a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    
+    font-weight: bold;
 }
 
 .menu a:hover {
-    text-decoration: underline;
+    color: #ff0000;
+}
+
+.carrinho {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .carrinho span {
     background: red;
     padding: 3px 7px;
     border-radius: 50%;
+    font-size: .8rem;
+    color: white;
+    font-weight: bold;
 }
 
-
-/* HEADER */
-
+/* HEADER / INTRO */
 .header-intro {
     text-align: center;
     padding: 3rem 1rem;
-    background: #f9f9f9;
+    background: #f2f2f2;
 }
 
-
 /* RARIDADES */
-
 .raridades {
     text-align: center;
     padding: 2rem 1rem;
@@ -82,6 +91,7 @@ body {
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -89,6 +99,11 @@ body {
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card.comum {
@@ -105,19 +120,16 @@ body {
     color: #fff;
 }
 
-
 /* PRODUTOS */
-
 .produtos {
     padding: 2rem;
-    background: #fff;
     text-align: center;
 }
 
 .grid-produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
     margin-top: 1rem;
 }
 
@@ -125,42 +137,46 @@ body {
     border: 1px solid #ddd;
     padding: 1rem;
     border-radius: 10px;
+    background: #fff;
+    transition: .3s;
 }
 
-.produto .img {
-    height: 120px;
-    background: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: gray;
-    margin-bottom: 0.5rem;
+.produto:hover {
+    box-shadow: 0 0 10px rgba(255,0,0,0.4);
+    transform: translateY(-5px);
+}
+
+.produto h3 {
+    margin-top: .5rem;
 }
 
 .produto button {
     background: #ff0000;
     border: none;
     color: #fff;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
+    transition: .3s;
 }
 
 .produto button:hover {
     background: #cc0000;
 }
 
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* simples, opcional */
+    }
 
-/* PAGAMENTO */
-
-.pagamento {
-    padding: 2rem;
-    text-align: center;
+    .navbar {
+        justify-content: space-between;
+    }
 }
 
-
 /* FOOTER */
-
 footer {
     background: #000;
     color: #fff;
